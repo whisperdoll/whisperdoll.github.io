@@ -1,0 +1,18 @@
+---
+title: Blog
+header: Blog
+permalink: /blog
+---
+{% if site.posts.size == 0 %}
+    <p>I guess I haven't made a blog post yet... I hope you won't hold that against me</p>
+    <p>Expect music and coding stuff here soon!</p>
+{% else %}
+    <ul>
+        {% for post in site.posts %}
+            <li class="blog-item">
+                <h2><a href="{{ post.url | relative_link }}">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

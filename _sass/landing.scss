@@ -1,0 +1,87 @@
+html, body, #content, #blur {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#blur {
+  background-image: url("img/mee4.png");
+  background-position: center;
+  filter: blur(3px);
+  position: absolute;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#mina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #title {
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 2rem;
+  }
+}
+
+nav {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+    text-align: right;
+    width: 10rem;
+    align-items: flex-end;
+
+    &:hover {
+      color: #df2a69;
+      border-bottom: 2px solid #df2a69;
+    }
+
+    &::after {
+      content: " »";
+    }
+  }
+}
+
+#nav-left {
+}
+
+#nav-right {
+  a {
+    text-align: right;
+  }
+}

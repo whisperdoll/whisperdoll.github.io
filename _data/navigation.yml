@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+- name: Art
+  link: /art
+- name: Music
+  link: /music
+- name: Coding
+  link: /coding
+  collection: projects
+- name: Blog
+  link: /blog
+  collection: posts
+- name: About
+  link: /about

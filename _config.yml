@@ -1,0 +1,27 @@
+collections:
+  projects:
+    output: true
+  posts:
+    output: true
+    permalink: /blog/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+        layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+        layout: "post"
+  - scope:
+      path: ""
+    values:
+        layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

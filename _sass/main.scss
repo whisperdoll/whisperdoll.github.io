@@ -1,0 +1,272 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto";
+  font-weight: 300;
+  background-color: #fafafa;
+  color: #333;
+}
+
+body {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+$accentColor1: #fb3279;
+$accentColor2: darken($accentColor1, 13%);
+
+#side {
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2rem 1.5rem;
+  padding-left: 4rem;
+  color: #eee;
+  border-right: 1px dotted rgba(255,255,255,0.5);
+
+  $rightPadding: 1rem;
+
+  #title {
+    font-size: 3rem;
+    margin-bottom: 8px;
+    padding-right: $rightPadding;
+    
+    a
+    {
+      color: #eee;
+      text-decoration: none;
+    }
+  }
+
+  #subtitle {
+    font-family: monospace;
+    color: #ccc;
+    margin-bottom: 2rem;
+    padding-right: $rightPadding;
+    font-size: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    a
+    {
+      color: white;
+      text-decoration: none;
+      margin: 4px 0;
+      font-size: 2rem;
+      display: block;
+      width: 200px;
+      text-align: right;
+      padding: 8px $rightPadding;
+      box-sizing: border-box;
+
+      &:hover
+      {
+        background: white;
+        color: #111;
+      }
+    }
+
+    .current
+    {
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+}
+
+.pixelated {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.side {
+  height: 400px;
+  width: auto !important;
+  float: right;
+}
+
+.project-item, .blog-item {
+  margin-bottom: 24px;
+
+  & > * {
+    margin: 12px 0;
+  }
+}
+
+#content {
+  $sidePadding: 3rem;
+  padding: 32px $sidePadding;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgba(0,0,0,0.8);
+  max-height: 100%;
+  overflow: auto;
+  flex-grow: 1;
+  padding-right: 10rem;
+  color: white;
+
+  a {
+    color: $accentColor1;
+  
+    &:hover
+    {
+      color: $accentColor2;
+    }
+  }
+  
+  h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: $accentColor1;
+    font-size: 3rem;
+    font-weight: 400;
+  
+    .breadcrumb
+    {
+      display:block;
+    }
+  }
+
+  img, video {
+    width: 100%;
+  }
+
+  .art-gallery {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 50%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+#footer {
+  color: #ccc;
+}
+
+@media screen and (max-width: 1024px) {
+  #side, #side-content, #side-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
+  }
+  
+  #side {
+    background-color: #000;
+  
+    #side-background
+    {
+      padding: 0;
+      object-fit: cover;
+    }
+  
+    #side-content
+    {
+      background-image: none;
+      background-color: rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      padding: 0;
+      color: #eee;
+    }
+  
+    $rightPadding: 16px;
+    #title
+    {
+      font-size: 2rem;
+      line-height: 64px;
+      padding: 0 2rem;
+      
+      a
+      {
+        color: #eee;
+        text-decoration: none;
+      }
+
+      display: none;
+    }
+  
+    #subtitle
+    {
+      display: none;
+    }
+  
+    nav
+    {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      overflow-x: auto;
+      overflow-y: hidden;
+  
+      a
+      {
+        color: white;
+        text-decoration: none;
+        margin: 0;
+        font-size: 2rem;
+        display: block;
+        width: auto;
+        text-align: right;
+        padding: 0 16px;
+        box-sizing: border-box;
+        line-height: 64px;
+
+        @media screen and (max-width: 480px)
+        {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 340px)
+        {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 280px)
+        {
+          font-size: 10px;
+        }
+  
+        &:hover
+        {
+          background: white;
+          color: #111;
+        }
+      }
+  
+      .current
+      {
+        background-color: rgba(255,255,255,0.2);
+      }
+    }
+  }
+
+  #content {
+    $sidePadding: 48px;
+    padding: 32px $sidePadding;
+    padding-top: 72px;
+    width: 100%;
+    max-width: 700px;
+    font-size: 18px;
+    font-weight: 400;
+    box-sizing: border-box;
+  }
+}
