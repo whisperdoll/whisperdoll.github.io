@@ -4,7 +4,7 @@ header: About
 permalink: /about
 ---
 
-<img class="side" alt="Brown-haired girl with a neutral expression." src="{{ site.baseurl }}/img/me.jpg" />
+<img class="side" alt="Brown-haired girl with a neutral expression." src="{{ '/img/me.jpg' | relative_path }}" />
 
 My name is Mina Kemp and I am an angel (like from EVA).
 

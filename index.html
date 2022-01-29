@@ -4,15 +4,15 @@ header: Welcome
 layout: landing
 ---
 <nav id="nav-left">
-  <a href="{{ site.baseurl }}/art">Art</a>
-  <a href="{{ site.baseurl }}/music">Music</a>
-  <a href="{{ site.baseurl }}/coding">Coding</a>
+  <a href="{{ 'art' | relative_path }}">Art</a>
+  <a href="{{ 'music' | relative_path }}">Music</a>
+  <a href="{{ 'coding' | relative_path }}">Coding</a>
 </nav>
 <div id="mina">
-  <img src="{{ site.baseurl }}/img/mina.png" />
+  <img src="{{ 'img/mina.png' | relative_path }}" />
   <h1 id="title">Mina Kemp // whisperdoll</h1>
 </div>
 <nav id="nav-right">
-  <a href="{{ site.baseurl }}/blog">Blog</a>
-  <a href="{{ site.baseurl }}/about">About</a>
+  <a href="{{ 'blog' | relative_path }}">Blog</a>
+  <a href="{{ 'about' | relative_path }}">About</a>
 </nav>
