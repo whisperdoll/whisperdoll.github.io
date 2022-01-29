@@ -107,8 +107,8 @@ $accentColor2: darken($accentColor1, 13%);
 
 #content {
   $sidePadding: 3rem;
-  padding: 32px $sidePadding;
-  font-size: 18px;
+  padding: 2rem $sidePadding;
+  font-size: 1rem;
   font-weight: 400;
   background-color: rgba(0,0,0,0.8);
   max-height: 100%;
@@ -159,36 +159,20 @@ $accentColor2: darken($accentColor1, 13%);
 }
 
 @media screen and (max-width: 1024px) {
-  #side, #side-content, #side-background {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 64px;
-    box-sizing: border-box;
+  body {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
+
   #side {
-    background-color: #000;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0;
+    color: #eee;
   
-    #side-background
-    {
-      padding: 0;
-      object-fit: cover;
-    }
-  
-    #side-content
-    {
-      background-image: none;
-      background-color: rgba(0,0,0,0.6);
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      padding: 0;
-      color: #eee;
-    }
-  
-    $rightPadding: 16px;
+    $rightPadding: 1rem;
     #title
     {
       font-size: 2rem;
@@ -230,19 +214,14 @@ $accentColor2: darken($accentColor1, 13%);
         box-sizing: border-box;
         line-height: 64px;
 
-        @media screen and (max-width: 480px)
+        @media screen and (max-width: 50rem)
         {
-          font-size: 18px;
+          font-size: 1.5rem;
         }
 
-        @media screen and (max-width: 340px)
+        @media screen and (max-width: 35rem)
         {
-          font-size: 14px;
-        }
-
-        @media screen and (max-width: 280px)
-        {
-          font-size: 10px;
+          font-size: 1rem;
         }
   
         &:hover
@@ -260,13 +239,18 @@ $accentColor2: darken($accentColor1, 13%);
   }
 
   #content {
-    $sidePadding: 48px;
-    padding: 32px $sidePadding;
-    padding-top: 72px;
-    width: 100%;
-    max-width: 700px;
-    font-size: 18px;
-    font-weight: 400;
-    box-sizing: border-box;
+    @media screen and (max-width: 50rem)
+    {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    $sidePadding: 3rem;
+    padding: 2rem $sidePadding;
   }
 }
