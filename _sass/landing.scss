@@ -85,3 +85,21 @@ nav {
     text-align: right;
   }
 }
+
+@media screen and (max-width: 50rem) {
+  #content {
+    flex-direction: column;
+    overflow: auto;
+    justify-content: space-around;
+    min-height: 50rem;
+
+    nav {
+      justify-content: flex-start;
+      height: auto;
+    }
+  }
+
+  #mina {
+    order: -1;
+  }
+}
