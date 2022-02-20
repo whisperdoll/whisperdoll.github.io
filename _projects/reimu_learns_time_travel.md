@@ -1,8 +1,8 @@
 ---
 name: Reimu Learns Time Travel
 title: Reimu Learns Time Travel
-link: https://songsing.github.io/reimu-learns-time-travel/
-github: https://github.com/SongSing/reimu-learns-time-travel
+link: https://whisperdoll.github.io/reimu-learns-time-travel/
+github: https://github.com/whisperdoll/reimu-learns-time-travel
 images:
   - reimu.png
 ---

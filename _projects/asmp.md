@@ -1,8 +1,8 @@
 ---
 name: ASMP
 title: ASMP
-link: https://songsing.github.io/asmp
-github: https://github.com/SongSing/asmp
+link: https://whisperdoll.github.io/asmp
+github: https://github.com/whisperdoll/asmp
 ---
 Web-based Intel 8080 assembler and emulator, focused on education. Made in the Spring of 2018.
 

@@ -1,8 +1,8 @@
 ---
 name: Tsukimi Tower Defense
 title: Tsukimi Tower Defense
-link: https://songsing.itch.io/tsukimi-tower-defense
-github: https://github.com/SongSing/tsukimi-tower-defense
+link: https://whisperdoll.itch.io/tsukimi-tower-defense
+github: https://github.com/whisperdoll/tsukimi-tower-defense
 images:
   - tsukimi_tower_defense.png
   - tsukimi_tower_defense.gif
